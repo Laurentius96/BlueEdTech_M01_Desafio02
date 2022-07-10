@@ -17,14 +17,49 @@ for (let i = 1; i <= rounds; i++) {
             if (
                 (choiceUser === 1 && choicePc === 3) ||
                 (choiceUser === 2 && choicePc === 1) ||
-                (choiceUser === 3 && choicePC === 2)
+                (choiceUser === 3 && choicePc === 2)
             ) {
                 pointsUser++;
                 console.log('|==================================|');
                 console.log('|=== Você ganhou essa rodada!!! ===|');
                 console.log('|==================================|');
-                
+                console.log(`Você escolheu: ${options[choiceUser]}`);
+                console.log(`O PC escolheu: ${options[choicePc]}`);
+                console.log(`  - - - - - - - - - - - - - - - -  `);
+                console.log(`Usuario tem: ${pointsUser} pontos`);
+                console.log(`O PC tem: ${pointsPc} pontos`);
+                console.log('|==================================|\n\n');
+            } else if (
+                (choiceUser === 1 && choicePc === 1) ||
+                (choiceUser === 2 && choicePc === 2) ||
+                (choiceUser === 3 && choicePc === 3)
+            ) {
+                console.log('|==================================|');
+                console.log('|=== Empate! Ambos não pontuam! ===|');
+                console.log('|==================================|');
+                console.log(`Você escolheu: ${options[choiceUser]}`);
+                console.log(`O PC escolheu: ${options[choicePc]}`);
+                console.log(`  - - - - - - - - - - - - - - - -  `);
+                console.log(`Usuario tem: ${pointsUser} pontos`);
+                console.log(`O PC tem: ${pointsPc} pontos`);
+                console.log('|==================================|\n\n');
+            } else {
+                pointsPc++;
+                console.log('|==================================|');
+                console.log('|==== O PC ganhou essa rodada! ====|');
+                console.log('|==================================|');
+                console.log(`Você escolheu: ${options[choiceUser]}`);
+                console.log(`O PC escolheu: ${options[choicePc]}`);
+                console.log(`  - - - - - - - - - - - - - - - -  `);
+                console.log(`Usuario tem: ${pointsUser} pontos`);
+                console.log(`O PC tem: ${pointsPc} pontos`);
+                console.log('|==================================|\n\n');
             }
+        } else {
+            console.log('|==================================|');
+            console.log('| Escola INVÁLIDA, nova tentativa! |');
+            console.log('|==================================|');
+            console.log(`|  Faça sua Escolha - Rodada(${i}):   |`);
         }
     }
 
@@ -34,5 +69,8 @@ for (let i = 1; i <= rounds; i++) {
     console.log('|     > Escolha (3) para Tesoura   |');
     console.log('|==================================|');
     console.log(`|  Faça sua Escolha - Rodada(${i}):   |`);
-    let choiceUser = +prompt(+prompt('                '));
+    let choiceUser = round(+prompt('                '));
 }
+
+console.log('User;', pointsUser);
+console.log('PC;', pointsPc);
