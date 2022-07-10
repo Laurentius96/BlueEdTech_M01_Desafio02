@@ -23,11 +23,11 @@ for (let i = 1; i <= rounds; i++) {
                 console.log('|==================================|');
                 console.log('|=== Você ganhou essa rodada!!! ===|');
                 console.log('|==================================|');
-                console.log(`Você escolheu: ${options[choiceUser]}`);
-                console.log(`O PC escolheu: ${options[choicePc]}`);
+                console.log(`   Você escolheu: ${options[choiceUser]}`);
+                console.log(`   O PC escolheu: ${options[choicePc]}`);
                 console.log(`  - - - - - - - - - - - - - - - -  `);
-                console.log(`Usuario tem: ${pointsUser} pontos`);
-                console.log(`O PC tem: ${pointsPc} pontos`);
+                console.log(`   Usuario tem: ${pointsUser} pontos`);
+                console.log(`   O PC tem: ${pointsPc} pontos`);
                 console.log('|==================================|\n\n');
             } else if (
                 (choiceUser === 1 && choicePc === 1) ||
@@ -37,22 +37,22 @@ for (let i = 1; i <= rounds; i++) {
                 console.log('|==================================|');
                 console.log('|=== Empate! Ambos não pontuam! ===|');
                 console.log('|==================================|');
-                console.log(`Você escolheu: ${options[choiceUser]}`);
-                console.log(`O PC escolheu: ${options[choicePc]}`);
+                console.log(`   Você escolheu: ${options[choiceUser]}`);
+                console.log(`   O PC escolheu: ${options[choicePc]}`);
                 console.log(`  - - - - - - - - - - - - - - - -  `);
-                console.log(`Usuario tem: ${pointsUser} pontos`);
-                console.log(`O PC tem: ${pointsPc} pontos`);
+                console.log(`   Usuario tem: ${pointsUser} pontos`);
+                console.log(`   O PC tem: ${pointsPc} pontos`);
                 console.log('|==================================|\n\n');
             } else {
                 pointsPc++;
                 console.log('|==================================|');
                 console.log('|==== O PC ganhou essa rodada! ====|');
                 console.log('|==================================|');
-                console.log(`Você escolheu: ${options[choiceUser]}`);
-                console.log(`O PC escolheu: ${options[choicePc]}`);
+                console.log(`   Você escolheu: ${options[choiceUser]}`);
+                console.log(`   O PC escolheu: ${options[choicePc]}`);
                 console.log(`  - - - - - - - - - - - - - - - -  `);
-                console.log(`Usuario tem: ${pointsUser} pontos`);
-                console.log(`O PC tem: ${pointsPc} pontos`);
+                console.log(`   Usuario tem: ${pointsUser} pontos`);
+                console.log(`   O PC tem: ${pointsPc} pontos`);
                 console.log('|==================================|\n\n');
             }
         } else {
@@ -60,6 +60,7 @@ for (let i = 1; i <= rounds; i++) {
             console.log('| Escola INVÁLIDA, nova tentativa! |');
             console.log('|==================================|');
             console.log(`|  Faça sua Escolha - Rodada(${i}):   |`);
+            choiceUser = round(+prompt('                '));
         }
     }
 
@@ -72,5 +73,16 @@ for (let i = 1; i <= rounds; i++) {
     let choiceUser = round(+prompt('                '));
 }
 
-console.log('User;', pointsUser);
-console.log('PC;', pointsPc);
+if (pointsUser > pointsPc) {
+    console.log('|==================================|');
+    console.log('| Parabêns, você ganhou o JoKenPô! |');
+    console.log('|==================================|');
+} else if (pointsUser < pointsPc) {
+    console.log('|==================================|');
+    console.log('|      Que pena! O PC ganhou...    |');
+    console.log('|==================================|');
+} else {
+    console.log('|==================================|');
+    console.log('|      Você e o PC empataram!!     |');
+    console.log('|==================================|');
+}
