@@ -24,12 +24,12 @@ while (true) {
                     console.log('|==================================|');
                     console.log('|=== Você ganhou essa rodada!!! ===|');
                     console.log('|==================================|');
-                    console.log(`   Você escolheu: ${options[choiceUser]}`);
-                    console.log(`   O PC escolheu: ${options[choicePc]}`);
+                    console.log(`      Você escolheu: ${options[choiceUser]}`);
+                    console.log(`      O PC escolheu: ${options[choicePc]}`);
                     console.log(`  - - - - - - - - - - - - - - - -  `);
-                    console.log(`   Usuario tem: ${pointsUser} pontos`);
-                    console.log(`   O PC tem: ${pointsPc} pontos`);
-                    console.log('|==================================|\n\n');
+                    console.log(`      Usuario tem: ${pointsUser} pontos`);
+                    console.log(`      O PC tem: ${pointsPc} pontos`);
+                    console.log('|==================================|\n\n\n');
                 } else if (
                     (choiceUser === 1 && choicePc === 1) ||
                     (choiceUser === 2 && choicePc === 2) ||
@@ -38,30 +38,30 @@ while (true) {
                     console.log('|==================================|');
                     console.log('|=== Empate! Ambos não pontuam! ===|');
                     console.log('|==================================|');
-                    console.log(`   Você escolheu: ${options[choiceUser]}`);
-                    console.log(`   O PC escolheu: ${options[choicePc]}`);
+                    console.log(`       Você escolheu: ${options[choiceUser]}`);
+                    console.log(`       O PC escolheu: ${options[choicePc]}`);
                     console.log(`  - - - - - - - - - - - - - - - -  `);
-                    console.log(`   Usuario tem: ${pointsUser} pontos`);
-                    console.log(`   O PC tem: ${pointsPc} pontos`);
-                    console.log('|==================================|\n\n');
+                    console.log(`       Usuario tem: ${pointsUser} pontos`);
+                    console.log(`       O PC tem: ${pointsPc} pontos`);
+                    console.log('|==================================|\n\n\n');
                 } else {
                     pointsPc++;
                     console.log('|==================================|');
                     console.log('|==== O PC ganhou essa rodada! ====|');
                     console.log('|==================================|');
-                    console.log(`   Você escolheu: ${options[choiceUser]}`);
-                    console.log(`   O PC escolheu: ${options[choicePc]}`);
+                    console.log(`       Você escolheu: ${options[choiceUser]}`);
+                    console.log(`       O PC escolheu: ${options[choicePc]}`);
                     console.log(`  - - - - - - - - - - - - - - - -  `);
-                    console.log(`   Usuario tem: ${pointsUser} pontos`);
-                    console.log(`   O PC tem: ${pointsPc} pontos`);
-                    console.log('|==================================|\n\n');
+                    console.log(`       Usuario tem: ${pointsUser} pontos`);
+                    console.log(`       O PC tem: ${pointsPc} pontos`);
+                    console.log('|==================================|\n\n\n');
                 }
             } else {
                 console.log('|==================================|');
                 console.log('| Escola INVÁLIDA, nova tentativa! |');
                 console.log('|==================================|');
                 console.log(`|  Faça sua Escolha - Rodada(${i}):   |`);
-                choiceUser = round(+prompt('                '));
+                choiceUser = round(+prompt('                 '));
             }
         }
 
@@ -71,7 +71,7 @@ while (true) {
         console.log('|     > Escolha (3) para Tesoura   |');
         console.log('|==================================|');
         console.log(`|  Faça sua Escolha - Rodada(${i}):   |`);
-        let choiceUser = round(+prompt('                '));
+        let choiceUser = round(+prompt('                 '));
     }
 
     if (pointsUser > pointsPc) {
@@ -92,7 +92,7 @@ while (true) {
     console.log('|        Digite: (1) p/ SIM        |');
     console.log('|        Digite: (2) p/ NÃO        |');
     console.log('|==================================|');
-    choiceUser = +prompt('                ');
+    choiceUser = +prompt('                 ');
     console.log('|==================================|');
 
     if (choiceUser === 1) {
